@@ -43,6 +43,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -73,7 +75,21 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'django_rest_api_stock_ratings.wsgi.application'
 
-CORS_ALLOW_ALL_ORIGINS = True
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:8080",
+]
+# ALLOWED_HOSTS=['*']
+# CORS_ALLOW_ALL_ORIGINS = True
+ALLOWED_HOSTS=['localhost']
+
+CORS_ORIGIN_ALLOW_ALL = False
+
+CORS_ORIGIN_WHITELIST = (
+    'http://localhost:8080',
+)
+
+
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
