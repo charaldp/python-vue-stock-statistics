@@ -1,6 +1,8 @@
 # python-vue-stock-statistics
 
-(No Live Demo Available)
+VueJS Front-End (Demo): Setting Up
+
+Django Back-End (AWS-EC2): http://ec2-18-206-237-29.compute-1.amazonaws.com/api/stock_ratings/
 
 Django Project for Exposing API for Viewing Stock Ratings Graph and Statistics
 
